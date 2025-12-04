@@ -1,0 +1,20 @@
+# FONT
+font-family = FiraCode Nerd Font Mono
+font-family-bold = FiraCode Nerd Font Mono Bold
+font-size = 14
+
+# THEME
+background = 000000
+# theme = Apple System Colors
+background-opacity = 0.90
+bold-is-bright = true
+
+# CURSOR
+cursor-color = #3AE52C
+shell-integration-features = no-cursor
+cursor-style = underline
+
+macos-titlebar-style = hidden
+window-padding-balance = true
+window-padding-x = 5
+window-padding-y = 5
