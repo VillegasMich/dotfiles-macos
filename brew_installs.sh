@@ -31,7 +31,7 @@ formulae=(
   "fnm"
   "ffmpeg"
   "jq"
-  "borders"
+  "media-info"
   "starship"
   "zoxide"
   "sesh"
