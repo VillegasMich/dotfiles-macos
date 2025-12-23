@@ -33,9 +33,9 @@ return {
   { import = "astrocommunity.motion.mini-surround" },
 
   -- Completion
-  -- { import = "astrocommunity.completion.avante-nvim" },
-  -- { import = "astrocommunity.completion.copilot-lua" },
-  -- { import = "astrocommunity.completion.copilot-cmp" },
+  { import = "astrocommunity.completion.avante-nvim" },
+  { import = "astrocommunity.completion.copilot-lua" },
+  { import = "astrocommunity.completion.copilot-cmp" },
 
   -- Bars and Lines
   { import = "astrocommunity.bars-and-lines.smartcolumn-nvim" },
