@@ -1,3 +1,10 @@
+# OPENSPEC:START
+# OpenSpec shell completions configuration
+fpath=("/Users/manuel.villegas/.oh-my-zsh/custom/completions" $fpath)
+autoload -Uz compinit
+compinit
+# OPENSPEC:END
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
@@ -9,7 +16,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
-
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -111,3 +117,24 @@ alias le="eza -l -a --icons --group-directories-first"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+export AVANTE_GEMINI_API_KEY="AIzaSyAjKmMelgqdxLiyn3Ah0h2nLiVs8Eh3aIw"
+export PATH="$HOME/.local/bin:$PATH"
+export EDITOR="nvim"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2>/dev/null)"
+if [ $? -eq 0 ]; then
+  eval "$__conda_setup"
+else
+  if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+    . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+  else
+    export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
+  fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+conda deactivate

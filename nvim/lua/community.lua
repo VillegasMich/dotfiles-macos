@@ -8,6 +8,7 @@ return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.yaml" },
@@ -17,8 +18,10 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.kotlin" },
   { import = "astrocommunity.pack.xml" },
-  { import = "astrocommunity.pack.terraform" },
   { import = "astrocommunity.pack.vue" },
+  { import = "astrocommunity.pack.terraform" },
+  { import = "astrocommunity.pack.cmake" },
+  { import = "astrocommunity.pack.cpp" },
 
   -- Editing
   { import = "astrocommunity.editing-support.multiple-cursors-nvim" },
