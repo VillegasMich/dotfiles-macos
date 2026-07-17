@@ -25,18 +25,20 @@ return {
 
   -- Editing
   { import = "astrocommunity.editing-support.multiple-cursors-nvim" },
-  { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
+  -- { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
   { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
   { import = "astrocommunity.markdown-and-latex.texpresso-vim" },
 
   -- Colorschemes
   { import = "astrocommunity.colorscheme.catppuccin" },
+  { import = "astrocommunity.colorscheme.vscode-nvim" },
+  { import = "astrocommunity.colorscheme.onedarkpro-nvim" },
 
   -- Motion
   { import = "astrocommunity.motion.mini-surround" },
 
   -- Completion
-  { import = "astrocommunity.completion.avante-nvim" },
+  -- { import = "astrocommunity.completion.avante-nvim" },
   { import = "astrocommunity.completion.copilot-lua" },
   { import = "astrocommunity.completion.copilot-cmp" },
 

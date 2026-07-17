@@ -1,11 +1,11 @@
 # FONT
-font-family = FiraCode Nerd Font Mono
-font-family-bold = FiraCode Nerd Font Mono Bold
+# font-family = "JetBrainsMonoNL NFM Light"
+# font-family-bold = "JetBrainsMonoNL NFM Light"
 font-size = 14
 
 # THEME
 background = 000000
-# theme = Apple System Colors
+theme = Apple System Colors
 background-opacity = 0.95
 bold-is-bright = true
 

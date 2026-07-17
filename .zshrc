@@ -118,23 +118,48 @@ alias le="eza -l -a --icons --group-directories-first"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export AVANTE_GEMINI_API_KEY="AIzaSyAjKmMelgqdxLiyn3Ah0h2nLiVs8Eh3aIw"
+# LOAD CREDENTIALS
+~/dotfiles/envs.sh
+
+# AWS - granted for SSO credential management
+# alias assume="source assume"
+export AWS_PROFILE=SSIAppsDeveloper-676020893150
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$PATH:$HOME/go/bin"
+export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 export EDITOR="nvim"
+export PATH="$HOME/.ssi/bin:$PATH"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2>/dev/null)"
-if [ $? -eq 0 ]; then
-  eval "$__conda_setup"
-else
-  if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
-    . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
-  else
-    export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
-  fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+# UV
+export UV_INDEX_GITLAB_USERNAME="__token__"
+# export UV_INDEX_GITLAB_PASSWORD="" # exported from ./envs.sh
 
-conda deactivate
+# # >>> conda initialize >>>
+# # !! Contents within this block are managed by 'conda init' !!
+# __conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2>/dev/null)"
+# if [ $? -eq 0 ]; then
+#   eval "$__conda_setup"
+# else
+#   if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+#     . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+#   else
+#     export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
+#   fi
+# fi
+# unset __conda_setup
+# # <<< conda initialize <<<
+#
+# conda deactivate
+
+# AsyncAPI CLI Autocomplete
+
+ASYNCAPI_AC_ZSH_SETUP_PATH=/Users/manuel.villegas/Library/Caches/@asyncapi/cli/autocomplete/zsh_setup && test -f $ASYNCAPI_AC_ZSH_SETUP_PATH && source $ASYNCAPI_AC_ZSH_SETUP_PATH # asyncapi autocomplete setup
+
+eval "$(direnv hook zsh)"
+
+# global lonesnake auto-activation
+export PATH="${HOME}/.lonesnake/venv/bin:${PATH}"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

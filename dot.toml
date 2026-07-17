@@ -1,5 +1,6 @@
 ".zshrc" = "~/.zshrc"
 Wallpapers = "~/Pictures/Wallpapers"
+"config.toml" = "~/.config/herdr/config.toml"
 "config.yml" = "~/Library/Application Support/lazygit/config.yml"
 ghostty = "~/.config/ghostty"
 nvim = "~/.config/nvim"
