@@ -4,6 +4,10 @@ focus_pane_left = ["prefix+h", "prefix+left"]
 focus_pane_down = ["prefix+j", "prefix+down"]
 focus_pane_up = ["prefix+k", "prefix+up"]
 focus_pane_right = ["prefix+l", "prefix+right"]
+previous_workspace = "prefix+shift+left"
+next_workspace = "prefix+shift+right"
+previous_agent = ["prefix+shift+k", "prefix+shift+up"]
+next_agent = ["prefix+shift+j", "prefix+shift+down"]
 
 [theme]
 name = "terminal"
