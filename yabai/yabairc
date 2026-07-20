@@ -45,9 +45,16 @@ yabai -m rule --add app="^QuickTime Player$" manage=off
 yabai -m rule --add app="^Preview$" manage=off
 yabai -m rule --add app="^VLC$" manage=off
 yabai -m rule --add app="^Digital Colour Meter$" manage=off
+yabai -m rule --add app="^Ghostty$" manage=off
 
 yabai -m config focus_follows_mouse autofocus
 # yabai -m rule --add app="^Microsoft Teams classic$" manage=off
+
+# Ghostty destroys and recreates its AX window on every tab switch/creation,
+# which makes bsp briefly split the screen with itself and (with
+# auto_balance off) not always reclaim the space. Keep Ghostty out of bsp
+# entirely and force each new window to fill the display instead.
+yabai -m signal --add event=window_created app="^Ghostty$" action="$HOME/.config/yabai/scripts/fullscreen_ghostty.sh"
 
 echo "yabai configuration loaded.."
 
