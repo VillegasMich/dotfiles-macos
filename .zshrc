@@ -118,8 +118,8 @@ alias le="eza -l -a --icons --group-directories-first"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# LOAD CREDENTIALS
-~/dotfiles/envs.sh
+# LOAD CREDENTIALS (envs.sh is gitignored, see envs.sh.example)
+[[ -f ~/dotfiles/envs.sh ]] && source ~/dotfiles/envs.sh
 
 # AWS - granted for SSO credential management
 # alias assume="source assume"

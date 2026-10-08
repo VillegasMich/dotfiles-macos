@@ -1,0 +1,3 @@
+# Copy to envs.sh (gitignored) and fill in real values. Sourced from .zshrc.
+export UV_INDEX_GITLAB_PASSWORD=""
+export AVANTE_GEMINI_API_KEY=""
