@@ -1,12 +1,16 @@
 # FONT
+font-family = "FiraCode Nerd Font Mono"
+# Light / Regular / Retina / Medium / SemiBold / Bold
+font-style = Retina
 # font-family = "JetBrainsMonoNL NFM Light"
 # font-family-bold = "JetBrainsMonoNL NFM Light"
 font-size = 14
 
 # THEME
-background = 000000
-theme = Apple System Colors
+theme = Carbonfox
+# theme = light:Nvim Light,dark:nvim-dark-dimmed
 background-opacity = 0.95
+background-blur = 15
 bold-is-bright = true
 
 # CURSOR
@@ -14,7 +18,7 @@ cursor-color = #3AE52C
 shell-integration-features = no-cursor
 cursor-style = underline
 
-macos-titlebar-style = transparent
+macos-titlebar-style = tabs
 window-padding-balance = true
 window-padding-x = 5
 window-padding-y = 5

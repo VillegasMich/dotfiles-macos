@@ -1,0 +1,11 @@
+[includeIf "gitdir:~/Documents/Personal/"]
+	path = ~/.gitconfig-personal
+[includeIf "gitdir:~/dotfiles/"]
+	path = ~/.gitconfig-personal
+[credential]
+	helper = store
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

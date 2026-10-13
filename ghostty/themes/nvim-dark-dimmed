@@ -1,0 +1,25 @@
+# Nvim Dark, resaturated: stock hues pushed to 95% saturation and
+# normalised per-hue by relative luminance, on a #161a20 background.
+# Generated - see git history for the stock values.
+palette = 0=#050609
+palette = 1=#fb6352
+palette = 2=#05c029
+palette = 3=#f4b406
+palette = 4=#0690ed
+palette = 5=#fa48fa
+palette = 6=#05c7c5
+palette = 7=#e0e2ea
+palette = 8=#5c6068
+palette = 9=#fca59b
+palette = 10=#06ec33
+palette = 11=#fcda7d
+palette = 12=#62bdfb
+palette = 13=#fc9dfc
+palette = 14=#06eae8
+palette = 15=#eef1f8
+background = #161a20
+foreground = #e0e2ea
+cursor-color = #9b9ea4
+cursor-text = #e0e2ea
+selection-background = #5c6068
+selection-foreground = #e0e2ea
