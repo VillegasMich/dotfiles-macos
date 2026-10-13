@@ -26,13 +26,14 @@ finish that installer and run it again. In order, it:
 
 1. Installs Homebrew and everything in the [`Brewfile`](Brewfile): CLI tools, apps, fonts and App Store apps
 2. Signs yabai with the `yabai-cert` certificate (see [yabai](#yabai))
-3. Installs Rust (rustup) and cargo tools, including [`dot`](#how-configs-are-linked)
-4. Installs the LTS Node with fnm, plus global npm CLIs (codex, openspec, asyncapi, markdownlint)
-5. Installs uv, httpie and pyenv Python 3.10 / 3.11
-6. Installs Go tools (lazycommit) and Java 25 via sdkman
-7. Installs Claude Code and cursor-agent
-8. Creates `envs.sh` from the example and runs `dot sync` to symlink every config
-9. Installs oh-my-zsh, keeping the symlinked `.zshrc`, and the tmux plugin manager (TPM)
+3. Installs [Orca](https://www.stably.ai) from its latest GitHub release DMG (the `orca` Homebrew cask is a different app)
+4. Installs Rust (rustup) and cargo tools, including [`dot`](#how-configs-are-linked)
+5. Installs the LTS Node with fnm, plus global npm CLIs (codex, openspec, asyncapi, markdownlint)
+6. Installs uv, httpie and pyenv Python 3.10 / 3.11
+7. Installs Go tools (lazycommit) and Java 25 via sdkman
+8. Installs Claude Code and cursor-agent
+9. Creates `envs.sh` from the example and runs `dot sync` to symlink every config
+10. Installs oh-my-zsh, keeping the symlinked `.zshrc`, and the tmux plugin manager (TPM)
 
 ### 3. Finish by hand
 
@@ -41,7 +42,6 @@ finish that installer and run it again. In order, it:
 - [ ] Approve the macFUSE system extension: System Settings → Privacy & Security
 - [ ] Grant Accessibility access to yabai, skhd, AltTab and Ice when macOS asks
 - [ ] Log in: `gh auth login`, `glab auth login`, `granted` / `aws sso login`, `claude`
-- [ ] Install [Orca](https://www.stably.ai) from its website. The `orca` Homebrew cask is a different app.
 - [ ] Install tmux plugins: start tmux and press `prefix + I`
 - [ ] Open Neovim once so AstroNvim installs its plugins and language servers
 

@@ -33,6 +33,18 @@ else
   echo "⚠️  No 'yabai-cert' certificate found, create it in Keychain Access and re-run to sign yabai"
 fi
 
+# Orca (stablyai) has no cask (the 'orca' cask is a different app), install the latest
+# release DMG. The app updates itself afterwards.
+echo "🐳 Orca..."
+if [ ! -d "/Applications/Orca.app" ]; then
+  orca_tmp="$(mktemp -d)"
+  curl -fsSL -o "$orca_tmp/orca.dmg" "https://github.com/stablyai/orca/releases/latest/download/orca-macos-arm64.dmg"
+  hdiutil attach -nobrowse -readonly -quiet -mountpoint "$orca_tmp/mnt" "$orca_tmp/orca.dmg"
+  cp -R "$orca_tmp/mnt/Orca.app" /Applications/
+  hdiutil detach -quiet "$orca_tmp/mnt"
+  rm -rf "$orca_tmp"
+fi
+
 echo "🦀 Rust..."
 if ! command -v rustup &>/dev/null; then
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --no-modify-path
@@ -109,7 +121,6 @@ echo ""
 echo "✨ Bootstrap complete!"
 echo ""
 echo "📝 Manual steps:"
-echo "  • Install Orca (stablyai) from its website, the 'orca' cask is a different app"
 echo "  • Approve the macFUSE system extension in System Settings > Privacy & Security"
 echo "  • Optional: yabai scripting addition (requires partially disabling SIP, see README)"
 echo "  • Install tmux plugins: start tmux and press prefix + I"
