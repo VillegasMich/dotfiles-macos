@@ -24,10 +24,17 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 echo "📦 Brewfile (sign in to the App Store first for the mas apps)..."
 brew update
+# Homebrew skips formulas from third-party taps until the tap is trusted
+for tap in $(awk -F'"' '/^tap /{print $2}' "$DOTFILES/Brewfile"); do
+  brew tap "$tap"
+  brew trust "$tap"
+done
 brew bundle --file "$DOTFILES/Brewfile" || echo "⚠️  Some Brewfile entries failed, check the output above"
 
 # yabai is installed from HEAD and must be signed with a local certificate
-if security find-certificate -c "yabai-cert" &>/dev/null; then
+if ! brew list yabai &>/dev/null; then
+  echo "⚠️  yabai is not installed, check the Brewfile output above"
+elif security find-certificate -c "yabai-cert" &>/dev/null; then
   codesign -fs 'yabai-cert' "$(brew --prefix yabai)/bin/yabai"
 else
   echo "⚠️  No 'yabai-cert' certificate found, create it in Keychain Access and re-run to sign yabai"
@@ -104,6 +111,11 @@ if [ ! -f "$DOTFILES/envs.sh" ]; then
   echo "⚠️  Created envs.sh from the example, fill in the credentials"
 fi
 mkdir -p "$HOME/Library/Application Support/lazygit" "$HOME/.config/zed" "$HOME/.config/herdr" "$HOME/Pictures"
+# Installers above (uv, claude...) may have created a plain ~/.zshrc, which dot sync won't replace
+if [ -f "$HOME/.zshrc" ] && [ ! -L "$HOME/.zshrc" ]; then
+  mv "$HOME/.zshrc" "$HOME/.zshrc.bak"
+  echo "⚠️  Moved the existing ~/.zshrc to ~/.zshrc.bak"
+fi
 (cd "$DOTFILES" && dot sync)
 
 # After dot sync so the installer keeps the symlinked .zshrc

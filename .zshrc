@@ -125,6 +125,7 @@ alias le="eza -l -a --icons --group-directories-first"
 # alias assume="source assume"
 export AWS_PROFILE=SSIAppsDeveloper-676020893150
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH" # rustup and cargo-installed tools (dot, skillfile)
 export PATH="$PATH:$HOME/go/bin"
 export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 export EDITOR="nvim"
