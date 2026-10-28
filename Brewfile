@@ -47,9 +47,12 @@ brew "gromgit/fuse/sshfs-mac"
 # --- Languages / build ---
 brew "fnm"
 brew "pyenv"
+# Python build deps for pyenv (3.10/3.11 need OpenSSL 3, not 4)
+brew "openssl@3"
+brew "readline"
+brew "xz"
+brew "tcl-tk"
 brew "go"
-brew "cmake"
-brew "ninja"
 brew "libpq" # psql client (keg-only)
 
 # --- Containers / cloud ---
@@ -63,7 +66,6 @@ brew "awscli"
 brew "common-fate/granted/granted"
 
 # --- AI CLIs ---
-brew "gemini-cli"
 brew "opencode"
 
 # --- Window management (yabai needs codesigning, see bootstrap.sh) ---
@@ -93,19 +95,14 @@ cask "villegasmich/tap/football-menubar"
 cask "ghostty"
 cask "zed"
 cask "sublime-text"
-cask "cursor"
-cask "visual-studio-code"
 cask "claude"
 cask "postman"
 cask "google-chrome"
-cask "thebrowsercompany-dia"
+# cask "thebrowsercompany-dia"
 cask "obsidian"
-cask "typora"
 cask "zoom"
-cask "vlc"
+# cask "vlc"
 cask "spotify"
-cask "tunein"
-cask "blender"
 
 mas "Bitwarden", id: 1352778147
 mas "Slack", id: 803453959
